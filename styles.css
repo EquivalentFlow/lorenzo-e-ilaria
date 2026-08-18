@@ -18,8 +18,8 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: "Palatino nova W04 Imperial", Palatino, "Palatino Linotype",
-    "Book Antiqua", Georgia, serif;
+  font-family: "Palatino Nova Imperial", "Palatino Nova", Palatino,
+    "Palatino Linotype", "Book Antiqua", Georgia, serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.55;
