@@ -100,26 +100,37 @@ footer::before {
   top: 0;
   left: 0;
   width: 100%;
-  height: 9px;
-  background:
-    radial-gradient(
-        10px 7px at 50% 100%,
-        transparent 8px,
-        rgba(17, 17, 17, 0.62) 8.5px,
-        rgba(17, 17, 17, 0.62) 9.25px,
-        transparent 9.75px
-      )
-      0 -2px / 20px 9px repeat-x,
-    radial-gradient(
-        10px 7px at 50% 0%,
-        transparent 8px,
-        rgba(17, 17, 17, 0.62) 8.5px,
-        rgba(17, 17, 17, 0.62) 9.25px,
-        transparent 9.75px
-      )
-      10px 5px / 20px 9px repeat-x;
-  transform: rotate(-0.2deg);
-  transform-origin: left center;
+  height: 6px;
+  background: var(--foreground);
+  clip-path: polygon(
+    0 42%,
+    6% 55%,
+    13% 36%,
+    21% 49%,
+    29% 31%,
+    37% 52%,
+    45% 40%,
+    54% 57%,
+    63% 35%,
+    72% 48%,
+    81% 29%,
+    90% 52%,
+    100% 39%,
+    100% 65%,
+    90% 75%,
+    81% 52%,
+    72% 70%,
+    63% 58%,
+    54% 80%,
+    45% 63%,
+    37% 76%,
+    29% 54%,
+    21% 73%,
+    13% 58%,
+    6% 76%,
+    0 65%
+  );
+  opacity: 0.48;
 }
 
 h2 {
