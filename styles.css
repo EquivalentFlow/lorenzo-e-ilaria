@@ -18,8 +18,8 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: "Palatino Nova Imperial", "Palatino Nova", Palatino,
-    "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-family: "Palatino nova W04 Imperial", Palatino, "Palatino Linotype",
+    "Book Antiqua", Georgia, serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.55;
@@ -88,9 +88,38 @@ h1 {
 }
 
 .section {
+  position: relative;
   margin-top: 72px;
-  padding-top: 22px;
-  border-top: 1px solid var(--line);
+  padding-top: 30px;
+}
+
+.section::before,
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 9px;
+  background:
+    radial-gradient(
+        10px 7px at 50% 100%,
+        transparent 8px,
+        rgba(17, 17, 17, 0.62) 8.5px,
+        rgba(17, 17, 17, 0.62) 9.25px,
+        transparent 9.75px
+      )
+      0 -2px / 20px 9px repeat-x,
+    radial-gradient(
+        10px 7px at 50% 0%,
+        transparent 8px,
+        rgba(17, 17, 17, 0.62) 8.5px,
+        rgba(17, 17, 17, 0.62) 9.25px,
+        transparent 9.75px
+      )
+      10px 5px / 20px 9px repeat-x;
+  transform: rotate(-0.2deg);
+  transform-origin: left center;
 }
 
 h2 {
@@ -193,9 +222,9 @@ address {
 }
 
 footer {
+  position: relative;
   margin-top: 72px;
-  padding-top: 22px;
-  border-top: 1px solid var(--line);
+  padding-top: 30px;
   color: var(--muted);
   font-size: 0.78rem;
   letter-spacing: 0.08em;
@@ -205,11 +234,12 @@ footer {
 
 @media (max-width: 760px) {
   body {
-    font-size: 17px;
+    font-size: 15px;
+    line-height: 1.5;
   }
 
   .site-shell {
-    padding: 46px 20px 36px;
+    padding: 32px clamp(30px, 9vw, 42px) 30px;
   }
 
   .details-grid {
@@ -217,16 +247,39 @@ footer {
   }
 
   h1 {
-    margin-bottom: 28px;
+    margin-bottom: 22px;
+    font-size: clamp(1.9rem, 9vw, 2.45rem);
+  }
+
+  .eyebrow {
+    font-size: 0.68rem;
   }
 
   .wedding-logo {
-    margin-bottom: 30px;
+    width: min(86%, 360px);
+    margin-bottom: 24px;
+  }
+
+  .welcome {
+    font-size: 1rem;
   }
 
   .section,
   footer {
-    margin-top: 56px;
+    margin-top: 44px;
+  }
+
+  .section {
+    padding-top: 26px;
+  }
+
+  h2 {
+    margin-bottom: 22px;
+    font-size: 1.25rem;
+  }
+
+  .rsvp-form {
+    margin-top: 24px;
   }
 }
 
