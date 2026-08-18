@@ -18,8 +18,10 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-family: "Palatino Nova Imperial", "Palatino Nova", Palatino,
+    "Palatino Linotype", "Book Antiqua", Georgia, serif;
   font-size: 18px;
+  font-weight: 500;
   line-height: 1.55;
   text-rendering: optimizeLegibility;
 }
@@ -36,7 +38,7 @@ textarea {
 }
 
 .wedding-page {
-  width: min(100%, 540px);
+  width: min(100%, 820px);
   margin: 0 auto;
 }
 
@@ -59,23 +61,30 @@ p {
 }
 
 h1 {
-  margin-bottom: 36px;
-  font-size: clamp(2.4rem, 8vw, 4.25rem);
-  font-weight: 400;
-  letter-spacing: -0.045em;
+  margin-bottom: 30px;
+  font-size: clamp(2.25rem, 6vw, 3.45rem);
+  font-weight: 600;
+  letter-spacing: -0.035em;
   line-height: 1.05;
 }
 
 .wedding-logo {
   display: block;
-  width: 100%;
+  width: min(100%, 500px);
   height: auto;
   margin: 0 auto 36px;
 }
 
 .welcome {
+  max-width: 620px;
   margin: 0 auto;
   font-size: 1.12rem;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 64px;
 }
 
 .section {
@@ -87,7 +96,7 @@ h1 {
 h2 {
   margin-bottom: 30px;
   font-size: 1.45rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: -0.015em;
 }
 
@@ -174,6 +183,7 @@ address {
 }
 
 .gifts p {
+  max-width: 680px;
   text-wrap: pretty;
 }
 
@@ -193,13 +203,17 @@ footer {
   text-transform: uppercase;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 760px) {
   body {
     font-size: 17px;
   }
 
   .site-shell {
     padding: 46px 20px 36px;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
   }
 
   h1 {
