@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Lorenzo e Ilaria//Matrimonio//IT
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:lorenzo-ilaria-20270605-cerimonia
+DTSTAMP:20261025T100000Z
+DTSTART:20270605T150000Z
+DTEND:20270605T163000Z
+SUMMARY:Matrimonio di Lorenzo e Ilaria
+LOCATION:Palazzo Barbieri\, Sala Arazzi\, Verona
+DESCRIPTION:Ci sposiamo! Ricevimento all'Hotel Due Torri\, Verona alle 18.30.
+END:VEVENT
+BEGIN:VEVENT
+UID:lorenzo-ilaria-20270605-ricevimento
+DTSTAMP:20261025T100000Z
+DTSTART:20270605T163000Z
+SUMMARY:Ricevimento di Lorenzo e Ilaria
+LOCATION:Hotel Due Torri\, Verona
+END:VEVENT
+END:VCALENDAR
